@@ -55,12 +55,12 @@ public class SampleController {
         private double wartosc=0;
         private double wartoscz=0;
         private double wartoscna=0;
-        private double przelicznik=1;
-        private double kurs=0.1148;
-        private double przelicznika=1;
-        private double kursa=0.1148;
-        private double przelicznikb=100;
-        private double kursb=5.6871;
+        private double przelicznik;
+        private double kurs;
+        private double przelicznika;
+        private double kursa;
+        private double przelicznikb;
+        private double kursb;
 	    private final String NBP_URLA = "http://www.nbp.pl/kursy/xml/lasta.xml";
 	    private final String NBP_URLB = "https://www.nbp.pl/kursy/xml/lastb.xml";
 	    private String selectedCurrency = "THB";
@@ -68,10 +68,10 @@ public class SampleController {
 	    int selectedIndex=0;
 	    public void initialize() {
 	    	  updateCurrencyTypeChoices();
-	    	
-	    	
-	    	
-	    	
+	    	kursa=kursyArraya.get(0);
+	    	kursb=kursyArrayb.get(0);
+	    	przelicznikb=przelicznikiArrayb.get(0);
+	    	przelicznika=przelicznikiArraya.get(0);
 	    	
 	    	
 	    	tableType.getItems().add("Tabela A");
